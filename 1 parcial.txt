@@ -1,0 +1,57 @@
+...
+System calls son llamadas de las aplicaciones hacia el OS para correr en modo usuario y no en Kernel.
+Programas de systema son diferentes.
+
+Operating system design and implementation:
+ Dos principios diferentes:
+	- policy: el qué
+	- mechanism: el cómo
+ Los ingenieros son los encargados de definir los mecanismos.
+ Los políticos o 'Jefes' definen las políticas. Por lo que la diferenciación entre los dos ayuda a que exista flexibilidad.
+
+Capítulo 3: Processes
+
+Un proceso es un programa que se está ejecutando. El programa es el archivo pasivo.
+
+Process Concept:
+ Un OS ejec´tua una variedad de programas:
+	- Batch system -- jobs
+	- Time Shared systems -- user programs or tasks
+ La ejecución de un proceso debe progresar de forma sequencial.
+ Muchas partes:
+ 	- text section: instrucciones, imposible de reescribir.
+	- program counter
+	- stack: data temporal, llamadas a funciones, párametros de funciones.
+	- data ssection: global variables, no hay acceso si se usa lenguaje de alto nivel.
+	- heap: variables dinámicas.
+ Sólo el text section está en el archivo del programa.
+ Un programa puede generar varios procesos. A la hora de generar un proceso se reserva memoria en la que se corre el programa que ocupa todas las partes previamente descritas.
+ 
+Process State:
+ Estados en el que se encuenrta el programa.
+ Ya sea nuevo, listo, en espera, corriendo, terminado. Pero pueden existir otros.
+
+Switch Process
+ Al cambiar de proceso se guarda el estado del otro en los PCB.
+
+Process Control Block
+ un bloque por programa en el que se guarda el timer 
+
+Calendarizadores
+ el calendarizador a corto tiempo toma programas del PCB para correrlos en el CPU.
+ El calendarizado a largo plazo, se encarga de admitir programas a las colas.
+ El calendarizador de tiempo medio, se encarga de dar preferencias a los programas de sistema.
+ 
+Cambio de Contexto
+ Es caundo cambias de proceso y el CPU debe gaurdar el estado de los otros.
+
+Process Creation
+Process Termination
+Interprocess communication
+
+Lenguaje ensamblador
+ El set de instrucciones lo limita el tamaño de la arquitectura. Una instrucción corresponde a una sola linea de bits, con sus parametros.
+ No se cmpila, se ensambla. Sus directivas empiezan con '.', etiquetas terminan con ':'
+
+Pipes:
+ Comunicación entre dos proesos en un fork, ya que se heredan. Se encuentra en el Kernel, la sincronización la hace el kernel.

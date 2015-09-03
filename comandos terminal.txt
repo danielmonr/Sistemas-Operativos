@@ -1,0 +1,40 @@
+comandos:
+Git:
+	- commit: guarda cambios en base de datos
+	- add: igual
+	- push: empuja, es posible que no se pueda por que falta hacerle un pull.
+	- git clone direccion de la otra git: clonea una base de datos
+	- pull: cheka si hay cambios en la BD original y los copia.
+
+Vi:
+	- :q : salir guardando cambios
+	- :q! :salir sin guardar cambios
+	- :w : guardar cambios
+	- i: antes del cursor
+	- I: antes de la línea
+	- a: después del cursor
+	- A: después de la linea
+	- o: linea abajo
+	- O: linea arriba
+	- dd: borra linea
+	- dw: borra palabra
+	- nº comando: repite comando nº de veces
+	- 80 i * <esc>: repite 80 asteriscos
+	- crt u/d: moverse para arriba (up) o abajo (down)
+	- Esc u: undo
+	- yy: copia linea a portapapeles
+	- p: pega lo que esta en portapapeles
+	- :/<palabra>: busca palabra
+	- :g/<palabra>/s//<palabra2>: sustituye palabra por palabra2
+
+- ctr z: pone en suspendido un programa
+- fg %<nº job>: reabre un programa suspendido	
+- kill -9 % <nºtarea>: mata un job
+- jobs: muestra los procesos
+- ps: muestra todos los procesos
+
+- gcc -E: compilador c sin compilar muestra el codigo del compilador.
+- gcc -c compila sin generar ejecutable. Crea un .o que es un binariono ejecutable
+
+
+
